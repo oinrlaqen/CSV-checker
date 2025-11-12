@@ -18,22 +18,17 @@ with st.expander("🧪 Try Sample Files"):
 
     col1, col2 = st.columns(2)
 
-    # Read the local CSVs
-    messy_file = pd.read_csv(messy_file_path)
-    clean_file = pd.read_csv(clean_file_path)
+    with open(messy_file_path, "r", encoding="utf-8") as f:
+        messy_content = f.read()
 
-    # Convert to in-memory CSV buffers
-    messy_buffer = io.StringIO()
-    messy_file.to_csv(messy_buffer, index = False)
-
-    clean_buffer = io.StringIO()
-    clean_file.to_csv(clean_buffer, index = False)
+    with open(clean_file_path, "r", encoding="utf-8") as f:
+        clean_content = f.read()
 
     # Download buttons
     with col1:
         st.download_button(
             label = "📥 Messed-Up File",
-            data = messy_buffer.getvalue(),
+            data = messy_content,
             file_name = "messed_up_file.csv",
             mime = "text/csv",
             use_container_width = True
@@ -42,7 +37,7 @@ with st.expander("🧪 Try Sample Files"):
     with col2:
         st.download_button(
             label = "📥 Corrected File",
-            data = clean_buffer.getvalue(),
+            data = clean_content,
             file_name = "corrected_file.csv",
             mime = "text/csv",
             use_container_width = True
