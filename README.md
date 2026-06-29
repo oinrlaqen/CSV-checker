@@ -1,8 +1,8 @@
-### Brief App Description:
+# Brief App Description:
 
 This Streamlit-made CSV validator checks regular file with employees' insurance coverage info on a bunch of inconsistencies
 
-The core idea is to match headers from the original CSV (using *rapidfuzz* module) with the number of typical headers from the historical CSVs so that all the checks could be automated
+The core idea is to match headers from the original CSV (using *rapidfuzz* module) with the number of typical headers from the database so that all the checks could be automated
 
 If some of the headers from the current CSV have not been matched due to their uniqueness, it's possible to rename them in **"Matched Headers"** section, so that they could be matched without correcting current CSV manually
 
