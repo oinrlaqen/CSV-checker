@@ -61,7 +61,7 @@ else:
 def clean_nan_values(df: pd.DataFrame, add_row_offset: int = 2) -> pd.DataFrame:
     cleaned = df.copy()
     cleaned = cleaned.replace([None, np.nan, "None", "none"], "")
-    cleaned = cleaned.astype(str).applymap(
+    cleaned = cleaned.astype(str).map(
         lambda x: "" if x.strip().lower() in ["none", "nan"] else x.strip()
     )
     cleaned.index = cleaned.index + add_row_offset
@@ -256,7 +256,7 @@ if uploaded_file is not None:
                 nan_values_df = nan_values_df[cols]
 
                 clean_nan_values_df = nan_values_df.replace([None, np.nan, "None", "none"], "").astype(str)
-                clean_nan_values_df = clean_nan_values_df.applymap(lambda x: "" if x.strip().lower() in ["none", "nan"] else x)
+                clean_nan_values_df = clean_nan_values_df.map(lambda x: "" if x.strip().lower() in ["none", "nan"] else x)
 
                 st.dataframe(clean_nan_values_df.set_index("Row Number"), use_container_width = True)
                 add_to_report(msg, clean_nan_values_df)
