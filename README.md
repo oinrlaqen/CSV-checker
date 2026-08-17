@@ -1,4 +1,15 @@
-# Brief App Description:
+## Main idea of the project
+
+Working in the US healthcare company, my primary goal is to <ins>implement client's file with its employees' info into our system</ins>.  
+  
+As those files we typically receive may be messy from time to time, we need to validate them manually in Google Sheets. However,  
+this process may be complicated and time consuming. When the file we are working with is large enough, it's also not a big deal  
+to **miss some inconsistency** and load inappropriate or invalid info into the app.  
+
+> This checker automates the verification process for bigger part of the files, making it easier to spot the invalid info and reach\
+back to the client for the clarification
+
+## Brief App Description:
 
 This Streamlit-made CSV validator checks regular file with employee insurance coverage info on a bunch of inconsistencies:
 
@@ -10,7 +21,7 @@ This Streamlit-made CSV validator checks regular file with employee insurance co
 - if SSN = Member ID (which is not allowed by the US PHI norms)
 - if coverage expiration date < coverage effective date
 
-All of these checks automated by matching headers from the original CSV (using *rapidfuzz* module) with the number of typical headers from the database
+All of these checks automated by matching headers from the original CSV (using *rapidfuzz* module) with the number of typical headers from our SQL database
 
 If some of the headers from the current CSV have not been matched due to their uniqueness, it's possible to rename them in **"Matched Headers"** section, so that they could be matched without correcting current CSV manually
 
