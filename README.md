@@ -6,8 +6,7 @@ As those files we typically receive may be messy from time to time, we need to v
 this process may be complicated and time consuming. When the file we are working with is large enough, it's also not a big deal
 to **miss some inconsistency** and load inappropriate or invalid info into the app.
   
-> This checker automates the verification process for bigger part of the files, making it easier to spot the invalid info and reach\
-back to the client for the clarification
+> This checker automates the verification process for bigger part of the files, making it easier to spot the invalid info and reach back to the client for the clarification
 
 ## Brief App Description:
 
