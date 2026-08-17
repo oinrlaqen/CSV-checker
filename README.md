@@ -1,11 +1,11 @@
 ## Main idea of the project
 
-Working in the US healthcare company, my primary goal is to <ins>implement client's file with its employees' info into our system</ins>.  
+Working in the US healthcare company, my primary goal is to <ins>implement client's file with its employees' info into our system</ins>.
   
-As those files we typically receive may be messy from time to time, we need to validate them manually in Google Sheets. However,  
-this process may be complicated and time consuming. When the file we are working with is large enough, it's also not a big deal  
-to **miss some inconsistency** and load inappropriate or invalid info into the app.  
-
+As those files we typically receive may be messy from time to time, we need to validate them manually in Google Sheets. However,
+this process may be complicated and time consuming. When the file we are working with is large enough, it's also not a big deal
+to **miss some inconsistency** and load inappropriate or invalid info into the app.
+  
 > This checker automates the verification process for bigger part of the files, making it easier to spot the invalid info and reach\
 back to the client for the clarification
 
